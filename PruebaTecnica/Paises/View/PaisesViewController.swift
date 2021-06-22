@@ -27,6 +27,7 @@ class PaisesViewController: UIViewController {
         paisesTableView.allowsSelection = true
         paisesTableView.allowsMultipleSelection = false
         
+        paisesTableView.register(PaisTableViewCell.self, forCellReuseIdentifier: PaisTableViewCell.cellIdentifier)
         paisesTableView.delegate = self
         paisesTableView.dataSource = self
         
@@ -47,11 +48,13 @@ class PaisesViewController: UIViewController {
 extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
+        cell.fillCellData(with: "Ejemplo")
+        return cell
     }
     
 }
