@@ -9,10 +9,21 @@ import UIKit
 
 class PaisesViewController: UIViewController {
     private var paisesTableView: UITableView!
+    private var presenter: PaisesPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurePresenter()
         configureView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.detachView()
+    }
+    private func configurePresenter() {
+        presenter = PaisesPresenter()
+        presenter.attachView(self)
     }
 
     private func configureView() {
@@ -55,6 +66,19 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
         cell.fillCellData(with: "Ejemplo")
         return cell
+    }
+    
+}
+
+//MARK: PaisesView protocol
+extension PaisesViewController: PaisesView {
+    
+    func showPaises() {
+        
+    }
+    
+    func showError(_ message: String) {
+        print(message)
     }
     
 }
