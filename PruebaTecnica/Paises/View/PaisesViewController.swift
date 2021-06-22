@@ -8,22 +8,53 @@
 import UIKit
 
 class PaisesViewController: UIViewController {
+    private var paisesTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+
+    private func configureView() {
         title = "Países"
-        view.backgroundColor = .blue
+        configureTableView()
+        addViewConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureTableView() {
+        paisesTableView = UITableView(frame: .zero)
+        paisesTableView.translatesAutoresizingMaskIntoConstraints = false
+        paisesTableView.allowsSelection = true
+        paisesTableView.allowsMultipleSelection = false
+        
+        paisesTableView.register(PaisTableViewCell.self, forCellReuseIdentifier: PaisTableViewCell.cellIdentifier)
+        paisesTableView.delegate = self
+        paisesTableView.dataSource = self
+        
+        view.addSubview(paisesTableView)
     }
-    */
 
+    private func addViewConstraints() {
+        NSLayoutConstraint.activate([
+            paisesTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            paisesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            paisesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            paisesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
+    }
+}
+
+//MARK: UITableViewDelegates
+extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
+        cell.fillCellData(with: "Ejemplo")
+        return cell
+    }
+    
 }

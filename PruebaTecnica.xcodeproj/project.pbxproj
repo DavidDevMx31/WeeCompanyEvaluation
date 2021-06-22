@@ -15,6 +15,7 @@
 		B4129CB2268243FA0099DBDF /* GothaProBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4129CB1268243FA0099DBDF /* GothaProBol.otf */; };
 		B4129CB4268244010099DBDF /* Gotham-Book-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4129CB3268244010099DBDF /* Gotham-Book-Regular.otf */; };
 		B4129CBA268245700099DBDF /* PaisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CB9268245700099DBDF /* PaisesViewController.swift */; };
+		B4129CBC268248CC0099DBDF /* PaisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBB268248CC0099DBDF /* PaisTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B4129CB1268243FA0099DBDF /* GothaProBol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothaProBol.otf; sourceTree = "<group>"; };
 		B4129CB3268244010099DBDF /* Gotham-Book-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book-Regular.otf"; sourceTree = "<group>"; };
 		B4129CB9268245700099DBDF /* PaisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesViewController.swift; sourceTree = "<group>"; };
+		B4129CBB268248CC0099DBDF /* PaisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B4129CB9268245700099DBDF /* PaisesViewController.swift */,
+				B4129CBB268248CC0099DBDF /* PaisTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				B4129CA1268242FB0099DBDF /* ViewController.swift in Sources */,
 				B4129CBA268245700099DBDF /* PaisesViewController.swift in Sources */,
 				B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */,
+				B4129CBC268248CC0099DBDF /* PaisTableViewCell.swift in Sources */,
 				B4129C9F268242FB0099DBDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
