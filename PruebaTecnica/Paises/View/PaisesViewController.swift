@@ -74,6 +74,12 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pais = presenter.paises[indexPath.row]
+        let selectedVC = SelectedViewController()
+        selectedVC.paisSeleccionado = pais.nombre
+        navigationController?.pushViewController(selectedVC, animated: true)
+    }
 }
 
 //MARK: PaisesView protocol
