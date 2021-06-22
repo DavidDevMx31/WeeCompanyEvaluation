@@ -17,10 +17,15 @@ class PaisesViewController: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.getPaises()
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         presenter.detachView()
     }
+    
     private func configurePresenter() {
         presenter = PaisesPresenter()
         presenter.attachView(self)
@@ -59,12 +64,13 @@ class PaisesViewController: UIViewController {
 extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return presenter.paises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
-        cell.fillCellData(with: "Ejemplo")
+        let pais = presenter.paises[indexPath.row]
+        cell.fillCellData(with: pais.nombre)
         return cell
     }
     
@@ -74,11 +80,14 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
 extension PaisesViewController: PaisesView {
     
     func showPaises() {
-        
+        paisesTableView.reloadData()
     }
     
     func showError(_ message: String) {
         print(message)
+        let ac = UIAlertController(title: "Ocurrió un error al consultar la información", message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
     }
     
 }

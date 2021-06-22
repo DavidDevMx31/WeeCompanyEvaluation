@@ -27,6 +27,23 @@ class PaisesPresenter {
     }
     
     func getPaises() {
-        
+        paisesService.getList { [weak self] response in
+            DispatchQueue.main.async {
+                switch response {
+                case .success(let lista):
+                    self?.parseResponseModel(lista)
+                    self?.view?.showPaises()
+                case .failure(let error):
+                    self?.view?.showError(error.rawValue)
+                }
+            }
+        }
+    }
+    
+    private func parseResponseModel(_ response: PaisesResponse) {
+        paises.removeAll()
+        for pais in response.Lista.Paises {
+            paises.append(PaisModel(id: pais.idPais, nombre: pais.Pais))
+        }
     }
 }

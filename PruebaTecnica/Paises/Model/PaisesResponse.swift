@@ -9,7 +9,7 @@ import Foundation
 
 struct PaisesResponse: Codable {
     let NoFilas: Int
-    let Lista: [Pais]
+    let Lista: PaisModel
     
     struct PaisModel: Codable {
         let Paises: [Pais]
