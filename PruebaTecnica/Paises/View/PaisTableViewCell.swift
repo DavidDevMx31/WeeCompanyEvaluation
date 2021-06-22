@@ -34,6 +34,8 @@ class PaisTableViewCell: UITableViewCell {
         nombrePais.translatesAutoresizingMaskIntoConstraints = false
         nombrePais.numberOfLines = 1
         nombrePais.adjustsFontSizeToFitWidth = true
+        nombrePais.font = UIFont(name: CustomFonts.GothamBook, size: 12)
+        nombrePais.textColor = UIColor(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.00)
         
         imagenSeleccionado = UIImageView(image: UIImage(named: "img_new_ok"))
         imagenSeleccionado.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +47,8 @@ class PaisTableViewCell: UITableViewCell {
         
         addCellConstraints()
     }
+    
+    
     
     private func addCellConstraints() {
         NSLayoutConstraint.activate([

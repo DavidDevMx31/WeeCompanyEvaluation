@@ -20,6 +20,7 @@
 		B4129CC026824E1E0099DBDF /* PaisesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBF26824E1E0099DBDF /* PaisesResponse.swift */; };
 		B4129CC226824F9A0099DBDF /* PaisesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC126824F9A0099DBDF /* PaisesService.swift */; };
 		B4129CC426824FDD0099DBDF /* PaisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC326824FDD0099DBDF /* PaisModel.swift */; };
+		B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC5268263270099DBDF /* CustomFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B4129CBF26824E1E0099DBDF /* PaisesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesResponse.swift; sourceTree = "<group>"; };
 		B4129CC126824F9A0099DBDF /* PaisesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesService.swift; sourceTree = "<group>"; };
 		B4129CC326824FDD0099DBDF /* PaisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisModel.swift; sourceTree = "<group>"; };
+		B4129CC5268263270099DBDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 		B4129C9B268242FB0099DBDF /* PruebaTecnica */ = {
 			isa = PBXGroup;
 			children = (
+				B4129CC5268263270099DBDF /* CustomFonts.swift */,
+				B4129CC72682661D0099DBDF /* SelectedModal */,
 				B4129CB52682453C0099DBDF /* Paises */,
 				B4129CB0268243E50099DBDF /* CustomFonts */,
 				B4129C9C268242FB0099DBDF /* AppDelegate.swift */,
@@ -126,6 +130,13 @@
 				B4129CC326824FDD0099DBDF /* PaisModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B4129CC72682661D0099DBDF /* SelectedModal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectedModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				B4129CC226824F9A0099DBDF /* PaisesService.swift in Sources */,
 				B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */,
 				B4129CC426824FDD0099DBDF /* PaisModel.swift in Sources */,
+				B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */,
 				B4129CBC268248CC0099DBDF /* PaisTableViewCell.swift in Sources */,
 				B4129C9F268242FB0099DBDF /* SceneDelegate.swift in Sources */,
 			);
