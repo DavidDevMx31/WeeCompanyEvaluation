@@ -76,9 +76,13 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pais = presenter.paises[indexPath.row]
+        
         let selectedVC = SelectedViewController()
         selectedVC.paisSeleccionado = pais.nombre
-        navigationController?.pushViewController(selectedVC, animated: true)
+        selectedVC.modalPresentationStyle = .formSheet
+        selectedVC.modalTransitionStyle = .coverVertical
+        
+        present(selectedVC, animated: true)
     }
 }
 

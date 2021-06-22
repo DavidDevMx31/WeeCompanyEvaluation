@@ -55,8 +55,8 @@ class SelectedViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             
             alertImage.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            messageLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            messageLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+            alertImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            alertImage.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             alertImage.heightAnchor.constraint(equalTo: alertImage.widthAnchor),
             
             messageLabel.topAnchor.constraint(equalTo: alertImage.bottomAnchor, constant: 10),
