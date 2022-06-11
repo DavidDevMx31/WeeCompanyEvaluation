@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129C9C268242FB0099DBDF /* AppDelegate.swift */; };
 		B4129C9F268242FB0099DBDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129C9E268242FB0099DBDF /* SceneDelegate.swift */; };
-		B4129CA1268242FB0099DBDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CA0268242FB0099DBDF /* ViewController.swift */; };
 		B4129CA6268242FE0099DBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4129CA5268242FE0099DBDF /* Assets.xcassets */; };
 		B4129CA9268242FE0099DBDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4129CA7268242FE0099DBDF /* LaunchScreen.storyboard */; };
 		B4129CB2268243FA0099DBDF /* GothaProBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4129CB1268243FA0099DBDF /* GothaProBol.otf */; };
@@ -19,7 +18,7 @@
 		B4129CBE26824DF50099DBDF /* PaisesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBD26824DF50099DBDF /* PaisesPresenter.swift */; };
 		B4129CC026824E1E0099DBDF /* PaisesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBF26824E1E0099DBDF /* PaisesResponse.swift */; };
 		B4129CC226824F9A0099DBDF /* PaisesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC126824F9A0099DBDF /* PaisesService.swift */; };
-		B4129CC426824FDD0099DBDF /* PaisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC326824FDD0099DBDF /* PaisModel.swift */; };
+		B4129CC426824FDD0099DBDF /* PaisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC326824FDD0099DBDF /* PaisViewModel.swift */; };
 		B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC5268263270099DBDF /* CustomFonts.swift */; };
 		B4129CC9268266570099DBDF /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC8268266570099DBDF /* SelectedViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,7 +27,6 @@
 		B4129C99268242FB0099DBDF /* PruebaTecnica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4129C9C268242FB0099DBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4129C9E268242FB0099DBDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4129CA0268242FB0099DBDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4129CA5268242FE0099DBDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4129CA8268242FE0099DBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4129CAA268242FE0099DBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,7 +37,7 @@
 		B4129CBD26824DF50099DBDF /* PaisesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesPresenter.swift; sourceTree = "<group>"; };
 		B4129CBF26824E1E0099DBDF /* PaisesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesResponse.swift; sourceTree = "<group>"; };
 		B4129CC126824F9A0099DBDF /* PaisesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisesService.swift; sourceTree = "<group>"; };
-		B4129CC326824FDD0099DBDF /* PaisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisModel.swift; sourceTree = "<group>"; };
+		B4129CC326824FDD0099DBDF /* PaisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisViewModel.swift; sourceTree = "<group>"; };
 		B4129CC5268263270099DBDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		B4129CC8268266570099DBDF /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 				B4129CB0268243E50099DBDF /* CustomFonts */,
 				B4129C9C268242FB0099DBDF /* AppDelegate.swift */,
 				B4129C9E268242FB0099DBDF /* SceneDelegate.swift */,
-				B4129CA0268242FB0099DBDF /* ViewController.swift */,
 				B4129CA5268242FE0099DBDF /* Assets.xcassets */,
 				B4129CA7268242FE0099DBDF /* LaunchScreen.storyboard */,
 				B4129CAA268242FE0099DBDF /* Info.plist */,
@@ -129,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B4129CBF26824E1E0099DBDF /* PaisesResponse.swift */,
-				B4129CC326824FDD0099DBDF /* PaisModel.swift */,
+				B4129CC326824FDD0099DBDF /* PaisViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,13 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4129CA1268242FB0099DBDF /* ViewController.swift in Sources */,
 				B4129CBE26824DF50099DBDF /* PaisesPresenter.swift in Sources */,
 				B4129CBA268245700099DBDF /* PaisesViewController.swift in Sources */,
 				B4129CC026824E1E0099DBDF /* PaisesResponse.swift in Sources */,
 				B4129CC226824F9A0099DBDF /* PaisesService.swift in Sources */,
 				B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */,
-				B4129CC426824FDD0099DBDF /* PaisModel.swift in Sources */,
+				B4129CC426824FDD0099DBDF /* PaisViewModel.swift in Sources */,
 				B4129CC9268266570099DBDF /* SelectedViewController.swift in Sources */,
 				B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */,
 				B4129CBC268248CC0099DBDF /* PaisTableViewCell.swift in Sources */,

@@ -16,7 +16,7 @@ class PaisesPresenter {
     private var view: PaisesView?
     private var paisesService = PaisesService()
     
-    private(set) var paises = [PaisModel]()
+    private(set) var paises = [PaisViewModel]()
     
     func attachView(_ view: PaisesView) {
         self.view = view
@@ -43,7 +43,7 @@ class PaisesPresenter {
     private func parseResponseModel(_ response: PaisesResponse) {
         paises.removeAll()
         for pais in response.Lista.Paises {
-            paises.append(PaisModel(id: pais.idPais, nombre: pais.Pais))
+            paises.append(PaisViewModel(id: pais.idPais, name: pais.Pais))
         }
     }
 }

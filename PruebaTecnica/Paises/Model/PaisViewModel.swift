@@ -9,5 +9,6 @@ import Foundation
 
 struct PaisViewModel {
     let id: String
-    let nombre: String
+    let name: String
+    var displayName: String { id + " - " + name }
 }

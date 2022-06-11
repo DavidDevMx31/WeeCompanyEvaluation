@@ -70,7 +70,7 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
         let pais = presenter.paises[indexPath.row]
-        cell.fillCellData(with: pais.nombre)
+        cell.fillCellData(with: pais.displayName)
         return cell
     }
     
@@ -78,7 +78,7 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
         let pais = presenter.paises[indexPath.row]
         
         let selectedVC = SelectedViewController()
-        selectedVC.paisSeleccionado = pais.nombre
+        selectedVC.paisSeleccionado = pais.name
         selectedVC.modalPresentationStyle = .formSheet
         selectedVC.modalTransitionStyle = .coverVertical
         
