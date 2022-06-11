@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PaisModel {
+struct PaisViewModel {
     let id: String
     let nombre: String
 }
