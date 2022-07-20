@@ -24,14 +24,14 @@ class SelectedViewController: UIViewController {
         
         titleLabel = UILabel(frame: .zero)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Click, \(paisSeleccionado ?? "")"
+        titleLabel.text = "Tap, \(paisSeleccionado ?? "")"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont(name: CustomFonts.GothamPro, size: 15)
         titleLabel.textColor = UIColor(red: 0.02, green: 0.49, blue: 0.72, alpha: 1.00)
         
         messageLabel = UILabel(frame: .zero)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.text = "Has dado clic en el estado de \(paisSeleccionado ?? "")"
+        messageLabel.text = "Has elegido el país \(paisSeleccionado ?? "")"
         messageLabel.numberOfLines = 2
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont(name: CustomFonts.GothamBook, size: 12)
