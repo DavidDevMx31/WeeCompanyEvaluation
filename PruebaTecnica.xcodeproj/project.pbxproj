@@ -24,6 +24,8 @@
 		B48D0589288F431300DE7900 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D0588288F431300DE7900 /* AppCoordinator.swift */; };
 		B48D058C288F436300DE7900 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D058B288F436300DE7900 /* Coordinator.swift */; };
 		B48D058E288F458E00DE7900 /* CoordinatorKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D058D288F458E00DE7900 /* CoordinatorKeys.swift */; };
+		B48D0590288F4B2300DE7900 /* CountriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D058F288F4B2300DE7900 /* CountriesCoordinator.swift */; };
+		B48D0592288F4C4C00DE7900 /* NavigationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D0591288F4C4C00DE7900 /* NavigationStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B48D0588288F431300DE7900 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B48D058B288F436300DE7900 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B48D058D288F458E00DE7900 /* CoordinatorKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorKeys.swift; sourceTree = "<group>"; };
+		B48D058F288F4B2300DE7900 /* CountriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCoordinator.swift; sourceTree = "<group>"; };
+		B48D0591288F4C4C00DE7900 /* NavigationStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		B4129CB52682453C0099DBDF /* Paises */ = {
 			isa = PBXGroup;
 			children = (
+				B48D058F288F4B2300DE7900 /* CountriesCoordinator.swift */,
 				B4129CB8268245520099DBDF /* Model */,
 				B4129CB72682454D0099DBDF /* View */,
 				B4129CB6268245460099DBDF /* Presenter */,
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B4129CC5268263270099DBDF /* CustomFonts.swift */,
+				B48D0591288F4C4C00DE7900 /* NavigationStyles.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -264,12 +270,14 @@
 				B4129CBA268245700099DBDF /* PaisesViewController.swift in Sources */,
 				B4129CC026824E1E0099DBDF /* PaisesResponse.swift in Sources */,
 				B4129CC226824F9A0099DBDF /* PaisesService.swift in Sources */,
+				B48D0592288F4C4C00DE7900 /* NavigationStyles.swift in Sources */,
 				B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */,
 				B4129CC426824FDD0099DBDF /* PaisViewModel.swift in Sources */,
 				B4129CC9268266570099DBDF /* SelectedViewController.swift in Sources */,
 				B48D058C288F436300DE7900 /* Coordinator.swift in Sources */,
 				B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */,
 				B48D058E288F458E00DE7900 /* CoordinatorKeys.swift in Sources */,
+				B48D0590288F4B2300DE7900 /* CountriesCoordinator.swift in Sources */,
 				B4129CBC268248CC0099DBDF /* PaisTableViewCell.swift in Sources */,
 				B4129C9F268242FB0099DBDF /* SceneDelegate.swift in Sources */,
 			);
@@ -412,7 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UT2RZS7M95;
-				INFOPLIST_FILE = PruebaTecnica/Info.plist;
+				INFOPLIST_FILE = PruebaTecnica/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UT2RZS7M95;
-				INFOPLIST_FILE = PruebaTecnica/Info.plist;
+				INFOPLIST_FILE = PruebaTecnica/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

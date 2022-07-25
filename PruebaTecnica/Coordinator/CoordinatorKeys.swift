@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoordinatorKeys: Hashable {
-    static let Countries = "Countries"
-    static let SelectedCountry = "SelectedCountry"
+enum CoordinatorKeys: String {
+    case Countries = "Countries"
+    case SelectedCountry = "SelectedCountry"
 }
