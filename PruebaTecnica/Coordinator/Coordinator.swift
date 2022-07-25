@@ -37,6 +37,10 @@ extension Coordinator {
             navigationController.present(viewController, animated: animated, completion: nil)
         case .push:
             navigationController.pushViewController(viewController, animated: animated)
+        case .sheet:
+            viewController.modalPresentationStyle = .formSheet
+            viewController.modalTransitionStyle = .coverVertical
+            navigationController.present(viewController, animated: animated)
         }
     }
     

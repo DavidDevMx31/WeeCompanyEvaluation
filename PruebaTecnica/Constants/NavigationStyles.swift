@@ -10,4 +10,5 @@ import Foundation
 enum NavigationStyles {
     case present
     case push
+    case sheet
 }

@@ -10,6 +10,9 @@ import UIKit
 class PaisesViewController: UIViewController {
     private var paisesTableView: UITableView!
     private var presenter: PaisesPresenter!
+    
+    var onCountryCellTap: ((String) -> ())?
+    var onError: ((String) -> ())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,13 +79,7 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pais = presenter.paises[indexPath.row]
-        
-        let selectedVC = SelectedViewController()
-        selectedVC.paisSeleccionado = pais.name
-        selectedVC.modalPresentationStyle = .formSheet
-        selectedVC.modalTransitionStyle = .coverVertical
-        
-        present(selectedVC, animated: true)
+        onCountryCellTap?(pais.name)
     }
 }
 
@@ -94,10 +91,8 @@ extension PaisesViewController: PaisesView {
     }
     
     func showError(_ message: String) {
-        print(message)
-        let ac = UIAlertController(title: "Ocurrió un error al consultar la información", message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Ok", style: .default))
-        present(ac, animated: true)
+        debugPrint("Error: \(message)")
+        onError?(message)
     }
     
 }
