@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol PaisesView {
+protocol CountriesView {
     func showPaises()
     func showError(_ message: String)
 }
 
-class PaisesPresenter {
-    private var view: PaisesView?
-    private var paisesService = PaisesService()
+class CountriesPresenter {
+    private var view: CountriesView?
+    private var paisesService = CountriesService()
     
-    private(set) var paises = [PaisViewModel]()
+    private(set) var paises = [CountryViewModel]()
     
-    func attachView(_ view: PaisesView) {
+    func attachView(_ view: CountriesView) {
         self.view = view
     }
     
@@ -40,10 +40,10 @@ class PaisesPresenter {
         }
     }
     
-    private func parseResponseModel(_ response: PaisesResponse) {
+    private func parseResponseModel(_ response: CountriesResponse) {
         paises.removeAll()
         for pais in response.Lista.Paises {
-            paises.append(PaisViewModel(id: pais.idPais, name: pais.Pais))
+            paises.append(CountryViewModel(id: pais.idPais, name: pais.Pais))
         }
     }
 }

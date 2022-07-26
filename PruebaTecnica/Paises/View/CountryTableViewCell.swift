@@ -1,5 +1,5 @@
 //
-//  PaisTableViewCell.swift
+//  CountryTableViewCell.swift
 //  PruebaTecnica
 //
 //  Created by David Ali on 22/06/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaisTableViewCell: UITableViewCell {
+class CountryTableViewCell: UITableViewCell {
     static let cellIdentifier = "PaisTableViewCell"
     private var nombrePais: UILabel!
     private var imagenSeleccionado: UIImageView!

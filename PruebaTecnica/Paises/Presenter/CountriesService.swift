@@ -1,5 +1,5 @@
 //
-//  PaisesService.swift
+//  CountriesService.swift
 //  PruebaTecnica
 //
 //  Created by David Ali on 22/06/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PaisesEndpointError: String, Error {
+enum CountriesEndpointError: String, Error {
     case badUrl = "La URL de consulta no es válida"
     case clientError = "Favor de revisar la petición"
     case serverError = "Error en el servidor"
@@ -15,15 +15,15 @@ enum PaisesEndpointError: String, Error {
     case decodingError = "Ocurrió un error al deserializar la informacion"
 }
 
-class PaisesService {
+class CountriesService {
     private let session = URLSession.shared
     private let paisesEndpoint = "https://876ee799-3f5a-4962-8812-a729fd17b274.mock.pstmn.io/paises"
     
-    typealias completionHandler = (Result<PaisesResponse, PaisesEndpointError>) -> Void
+    typealias completionHandler = (Result<CountriesResponse, CountriesEndpointError>) -> Void
     
     func getList(completion: @escaping completionHandler) {
         guard let urlEndpoint = URL(string: paisesEndpoint)  else {
-            completion(.failure(PaisesEndpointError.badUrl))
+            completion(.failure(CountriesEndpointError.badUrl))
             fatalError("La URL no tiene un formato válido")
         }
         var request = URLRequest(url: urlEndpoint)
@@ -58,7 +58,7 @@ class PaisesService {
             
             do {
                 let decoder = JSONDecoder()
-                let lista = try decoder.decode(PaisesResponse.self, from: responseData)
+                let lista = try decoder.decode(CountriesResponse.self, from: responseData)
                 print("Países encontrados: \(lista.NoFilas)")
                 completion(.success(lista))
             } catch {
