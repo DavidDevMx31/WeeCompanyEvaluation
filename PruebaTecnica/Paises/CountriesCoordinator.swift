@@ -22,7 +22,7 @@ class CountriesCoordinator: Coordinator {
     }
     
     func start() {
-        let countriesVC = PaisesViewController()
+        let countriesVC = CountriesViewController()
         countriesVC.onCountryCellTap = showSelectedCountry(_:)
         countriesVC.onError = showError(message:)
         navigate(to: countriesVC, with: .push, animated: false)

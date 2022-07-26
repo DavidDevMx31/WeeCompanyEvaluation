@@ -1,5 +1,5 @@
 //
-//  PaisesResponse.swift
+//  CountriesResponse.swift
 //  PruebaTecnica
 //
 //  Created by David Ali on 22/06/21.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct PaisesResponse: Codable {
+struct CountriesResponse: Codable {
     let NoFilas: Int
-    let Lista: PaisModel
+    let Lista: Countries
     
-    struct PaisModel: Codable {
-        let Paises: [Pais]
+    struct Countries: Codable {
+        let Paises: [Country]
     }
     
-    struct Pais: Codable {
+    struct Country: Codable {
         let idPais: String
         let Pais: String
     }

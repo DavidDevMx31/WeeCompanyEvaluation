@@ -1,5 +1,5 @@
 //
-//  PaisesViewController.swift
+//  CountriesViewController.swift
 //  PruebaTecnica
 //
 //  Created by David Ali on 22/06/21.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class PaisesViewController: UIViewController {
+class CountriesViewController: UIViewController {
     private var paisesTableView: UITableView!
-    private var presenter: PaisesPresenter!
+    private var presenter: CountriesPresenter!
     
     var onCountryCellTap: ((String) -> ())?
     var onError: ((String) -> ())?
@@ -30,7 +30,7 @@ class PaisesViewController: UIViewController {
     }
     
     private func configurePresenter() {
-        presenter = PaisesPresenter()
+        presenter = CountriesPresenter()
         presenter.attachView(self)
     }
 
@@ -46,7 +46,7 @@ class PaisesViewController: UIViewController {
         paisesTableView.allowsSelection = true
         paisesTableView.allowsMultipleSelection = false
         
-        paisesTableView.register(PaisTableViewCell.self, forCellReuseIdentifier: PaisTableViewCell.cellIdentifier)
+        paisesTableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.cellIdentifier)
         paisesTableView.delegate = self
         paisesTableView.dataSource = self
         
@@ -64,14 +64,14 @@ class PaisesViewController: UIViewController {
 }
 
 //MARK: UITableViewDelegates
-extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
+extension CountriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.paises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = paisesTableView.dequeueReusableCell(withIdentifier: PaisTableViewCell.cellIdentifier) as! PaisTableViewCell
+        let cell = paisesTableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.cellIdentifier) as! CountryTableViewCell
         let pais = presenter.paises[indexPath.row]
         cell.fillCellData(with: pais.displayName)
         return cell
@@ -84,7 +84,7 @@ extension PaisesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 //MARK: PaisesView protocol
-extension PaisesViewController: PaisesView {
+extension CountriesViewController: CountriesView {
     
     func showPaises() {
         paisesTableView.reloadData()
