@@ -28,7 +28,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let countriesCoordinator = CountriesCoordinator(with: self.navigationController)
-        addChild(countriesCoordinator, with: .Countries)
+        addChild(countriesCoordinator, with: .countries)
     }
     
 }

@@ -29,8 +29,7 @@ class CountriesCoordinator: Coordinator {
     }
     
     private func showSelectedCountry(_ countryName: String) -> () {
-        let selectedCountryVC = SelectedViewController()
-        selectedCountryVC.paisSeleccionado = countryName
+        let selectedCountryVC = SelectedViewController(countryName: countryName)
         navigate(to: selectedCountryVC, with: .sheet)
     }
     

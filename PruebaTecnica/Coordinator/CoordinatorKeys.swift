@@ -8,6 +8,5 @@
 import Foundation
 
 enum CoordinatorKeys: String {
-    case Countries = "Countries"
-    case SelectedCountry = "SelectedCountry"
+    case countries = "Countries"
 }
