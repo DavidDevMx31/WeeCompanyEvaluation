@@ -86,8 +86,7 @@
 				B48D0586288F41B000DE7900 /* Application */,
 				B48D0583288F417800DE7900 /* Assets */,
 				B48D0587288F41BD00DE7900 /* Constants */,
-				B4129CC72682661D0099DBDF /* SelectedModal */,
-				B4129CB52682453C0099DBDF /* Paises */,
+				B471C3282898BD0200F6F894 /* Modules */,
 			);
 			path = PruebaTecnica;
 			sourceTree = "<group>";
@@ -101,7 +100,7 @@
 			path = CustomFonts;
 			sourceTree = "<group>";
 		};
-		B4129CB52682453C0099DBDF /* Paises */ = {
+		B4129CB52682453C0099DBDF /* Contries */ = {
 			isa = PBXGroup;
 			children = (
 				B48D058F288F4B2300DE7900 /* CountriesCoordinator.swift */,
@@ -109,7 +108,7 @@
 				B4129CB72682454D0099DBDF /* View */,
 				B4129CB6268245460099DBDF /* Presenter */,
 			);
-			path = Paises;
+			path = Contries;
 			sourceTree = "<group>";
 		};
 		B4129CB6268245460099DBDF /* Presenter */ = {
@@ -145,6 +144,15 @@
 				B4129CC8268266570099DBDF /* SelectedViewController.swift */,
 			);
 			path = SelectedModal;
+			sourceTree = "<group>";
+		};
+		B471C3282898BD0200F6F894 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B4129CB52682453C0099DBDF /* Contries */,
+				B4129CC72682661D0099DBDF /* SelectedModal */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		B48D0583288F417800DE7900 /* Assets */ = {
