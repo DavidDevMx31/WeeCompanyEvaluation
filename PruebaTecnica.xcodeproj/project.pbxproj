@@ -17,10 +17,12 @@
 		B4129CBC268248CC0099DBDF /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBB268248CC0099DBDF /* CountryTableViewCell.swift */; };
 		B4129CBE26824DF50099DBDF /* CountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBD26824DF50099DBDF /* CountriesPresenter.swift */; };
 		B4129CC026824E1E0099DBDF /* CountriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CBF26824E1E0099DBDF /* CountriesResponse.swift */; };
-		B4129CC226824F9A0099DBDF /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC126824F9A0099DBDF /* CountriesService.swift */; };
+		B4129CC226824F9A0099DBDF /* CountriesAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC126824F9A0099DBDF /* CountriesAPIRepository.swift */; };
 		B4129CC426824FDD0099DBDF /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC326824FDD0099DBDF /* CountryViewModel.swift */; };
 		B4129CC6268263270099DBDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC5268263270099DBDF /* CustomFonts.swift */; };
 		B4129CC9268266570099DBDF /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4129CC8268266570099DBDF /* SelectedViewController.swift */; };
+		B44DE38A289B195A005C757F /* CountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DE389289B195A005C757F /* CountriesRepository.swift */; };
+		B44DE38C289B19AC005C757F /* MockCountriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DE38B289B19AC005C757F /* MockCountriesRepository.swift */; };
 		B48D0589288F431300DE7900 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D0588288F431300DE7900 /* AppCoordinator.swift */; };
 		B48D058C288F436300DE7900 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D058B288F436300DE7900 /* Coordinator.swift */; };
 		B48D058E288F458E00DE7900 /* CoordinatorKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D058D288F458E00DE7900 /* CoordinatorKeys.swift */; };
@@ -41,10 +43,12 @@
 		B4129CBB268248CC0099DBDF /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		B4129CBD26824DF50099DBDF /* CountriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenter.swift; sourceTree = "<group>"; };
 		B4129CBF26824E1E0099DBDF /* CountriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResponse.swift; sourceTree = "<group>"; };
-		B4129CC126824F9A0099DBDF /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
+		B4129CC126824F9A0099DBDF /* CountriesAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPIRepository.swift; sourceTree = "<group>"; };
 		B4129CC326824FDD0099DBDF /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		B4129CC5268263270099DBDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		B4129CC8268266570099DBDF /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		B44DE389289B195A005C757F /* CountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRepository.swift; sourceTree = "<group>"; };
+		B44DE38B289B19AC005C757F /* MockCountriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesRepository.swift; sourceTree = "<group>"; };
 		B48D0588288F431300DE7900 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B48D058B288F436300DE7900 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B48D058D288F458E00DE7900 /* CoordinatorKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorKeys.swift; sourceTree = "<group>"; };
@@ -100,22 +104,22 @@
 			path = CustomFonts;
 			sourceTree = "<group>";
 		};
-		B4129CB52682453C0099DBDF /* Contries */ = {
+		B4129CB52682453C0099DBDF /* Countries */ = {
 			isa = PBXGroup;
 			children = (
 				B48D058F288F4B2300DE7900 /* CountriesCoordinator.swift */,
 				B4129CB8268245520099DBDF /* Model */,
 				B4129CB72682454D0099DBDF /* View */,
 				B4129CB6268245460099DBDF /* Presenter */,
+				B44DE388289B1853005C757F /* Repository */,
 			);
-			path = Contries;
+			path = Countries;
 			sourceTree = "<group>";
 		};
 		B4129CB6268245460099DBDF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				B4129CBD26824DF50099DBDF /* CountriesPresenter.swift */,
-				B4129CC126824F9A0099DBDF /* CountriesService.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -146,10 +150,20 @@
 			path = SelectedModal;
 			sourceTree = "<group>";
 		};
+		B44DE388289B1853005C757F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B44DE389289B195A005C757F /* CountriesRepository.swift */,
+				B4129CC126824F9A0099DBDF /* CountriesAPIRepository.swift */,
+				B44DE38B289B19AC005C757F /* MockCountriesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		B471C3282898BD0200F6F894 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B4129CB52682453C0099DBDF /* Contries */,
+				B4129CB52682453C0099DBDF /* Countries */,
 				B4129CC72682661D0099DBDF /* SelectedModal */,
 			);
 			path = Modules;
@@ -273,11 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44DE38A289B195A005C757F /* CountriesRepository.swift in Sources */,
 				B48D0589288F431300DE7900 /* AppCoordinator.swift in Sources */,
 				B4129CBE26824DF50099DBDF /* CountriesPresenter.swift in Sources */,
 				B4129CBA268245700099DBDF /* CountriesViewController.swift in Sources */,
 				B4129CC026824E1E0099DBDF /* CountriesResponse.swift in Sources */,
-				B4129CC226824F9A0099DBDF /* CountriesService.swift in Sources */,
+				B44DE38C289B19AC005C757F /* MockCountriesRepository.swift in Sources */,
+				B4129CC226824F9A0099DBDF /* CountriesAPIRepository.swift in Sources */,
 				B48D0592288F4C4C00DE7900 /* NavigationStyles.swift in Sources */,
 				B4129C9D268242FB0099DBDF /* AppDelegate.swift in Sources */,
 				B4129CC426824FDD0099DBDF /* CountryViewModel.swift in Sources */,

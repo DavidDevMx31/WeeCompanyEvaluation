@@ -14,6 +14,16 @@ class CountriesViewController: UIViewController {
     var onCountryCellTap: ((String) -> ())?
     var onError: ((String) -> ())?
 
+    init(presenter: CountriesPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePresenter()
@@ -24,13 +34,13 @@ class CountriesViewController: UIViewController {
         super.viewWillAppear(animated)
         presenter.getPaises()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         presenter.detachView()
     }
     
     private func configurePresenter() {
-        presenter = CountriesPresenter()
         presenter.attachView(self)
     }
 

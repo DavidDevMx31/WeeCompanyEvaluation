@@ -1,5 +1,5 @@
 //
-//  CountriesService.swift
+//  CountriesAPIRepository.swift
 //  PruebaTecnica
 //
 //  Created by David Ali on 22/06/21.
@@ -7,15 +7,7 @@
 
 import Foundation
 
-enum CountriesEndpointError: String, Error {
-    case badUrl = "La URL de consulta no es válida"
-    case clientError = "Favor de revisar la petición"
-    case serverError = "Error en el servidor"
-    case invalidMimeType = "La respuesta tiene un MIME no esperado"
-    case decodingError = "Ocurrió un error al deserializar la informacion"
-}
-
-class CountriesService {
+class CountriesAPIRepository: CountriesRepository {
     private let session = URLSession.shared
     private let paisesEndpoint = "https://876ee799-3f5a-4962-8812-a729fd17b274.mock.pstmn.io/paises"
     

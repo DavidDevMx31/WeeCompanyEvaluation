@@ -22,7 +22,12 @@ class CountriesCoordinator: Coordinator {
     }
     
     func start() {
-        let countriesVC = CountriesViewController()
+        //Consulta paises desde el mock
+        //let countriesRepository = MockCountriesRepository()
+        //Consulta paises desde la URL
+        let countriesRepository = CountriesAPIRepository()
+        let countriesPresenter = CountriesPresenter(with: countriesRepository)
+        let countriesVC = CountriesViewController(presenter: countriesPresenter)
         countriesVC.onCountryCellTap = showSelectedCountry(_:)
         countriesVC.onError = showError(message:)
         navigate(to: countriesVC, with: .push, animated: false)

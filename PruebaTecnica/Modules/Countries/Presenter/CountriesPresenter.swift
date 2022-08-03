@@ -14,9 +14,13 @@ protocol CountriesView {
 
 class CountriesPresenter {
     private var view: CountriesView?
-    private var paisesService = CountriesService()
+    private var paisesRepository: CountriesRepository!
     
     private(set) var paises = [CountryViewModel]()
+    
+    init(with repository: CountriesRepository) {
+        self.paisesRepository = repository
+    }
     
     func attachView(_ view: CountriesView) {
         self.view = view
@@ -27,7 +31,7 @@ class CountriesPresenter {
     }
     
     func getPaises() {
-        paisesService.getList { [weak self] response in
+        paisesRepository.getList { [weak self] response in
             DispatchQueue.main.async {
                 switch response {
                 case .success(let lista):
