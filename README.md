@@ -1,20 +1,38 @@
 # MVP + Coordinators
-Ejemplo de implementación de un proyecto con arquitectura Modelo-Vista-Presentador (MVP) y coordinators.
+Example of a Model-View-Presenter (MVP) + Coordinators implementation.
 
-## Descripción
-En este proyecto se obtiene una lista de países desde una URL, la cual se generó usando un mock server de Postman. Cuando el usuario selecciona un país, se agrega un ícono en la celda para mostrar la fila seleccionada y se muestra una alerta con el nombre del país.
+# Introduction
+This sample project fetches a list of countries from a URL. Whenever a row is selected, a sheet with the country name shows.
 
-Los view controllers, las vistas y los constraints se hicieron en código, el storyboard inicial fue eliminado.
+# Overview
+The main screen fetches a list of countries from a URL generated using Postman's mock servers. Whenever the user taps on a country, a check icon appears in the tapped cell and a sheet shows the name of the selected country.
 
-## Arquitectura
-El proyecto se estructuró con la arquitectura Modelo - Vista - Presentador (MVP) + Coordinators.
+![](SupportFiles/CountriesSample.gif)
 
-El proyecto solo contiene 2 módulos: uno para mostrar la lista de países disponibles y otro que muestra una alerta personalizada con el nombre del país seleccionado. Ambos módulos se encuentran dentro de la carpeta *Modules*.
+The view controllers, views and constraints are coded and the initial storyboard was deleted.
 
-Para controlar la navegación dentro de la app se utilizan coordinators, ya que estos permiten extraer la lógica de navegación del view controller. De este modo, el view controller solo contiene código para mostrar los elementos de la interfaz y responder a las interacciones del usuario.
+# Architecture
+The project is based on the Model-View-Presenter (MVP) + Coordinators architectural pattern.
 
-El módulo *Countries* contiene carpetas para los distintos componentes de la arquitectura MVP y el coordinator del módulo. Para el módulo *SelectedModal* no se incluyeron clases relativas al modelo ni al presentador, ya que su funcionalidad es muy simple y solo consiste en mostrar información. De la misma manera, el módulo no contiene coordinator y es presentado directamente desde el coordinator de Países.
+The project contains two modules: 
+- **Countries**: shows the list of countries fetched.
+- **Selected modal**: shows a sheet with the name of the selected country. 
+*Both modules are in the Modules folder.*
 
-La lógica para obtener la lista de países se encuentra en la carpeta *Repository*. En *CountriesRepository.swift* se definió el protocolo que deben implementar las clases para obtener la lista de países. La clase *CountriesAPIRepository.swift* implementa dicho protocolo y contiene la lógica para leer la lista de países desde el endpoint creado en Postman. La clase *MockCountriesRepository.swift* implementa el mismo protocolo, pero en ella se crea de manera local una lista de países que se devuelve inmediatamente. Se puede cambiar entre una y otra implementación del protocolo según se necesite.
+To control the navigation, the app relies on coordinators. Coordinators allow extracting the navigation logic from the view controller, thereby making them lighter. The view controllers only contain the code needed to show the UI elements and respond to user interactions.
 
-Por último, el coordinator de países es donde se inicializan todas las dependencias necesarias para que el módulo funcione. Las dependencias se inyectan en las clases que las requieran.
+The *Countries* folder contains the coordinator and subfolders for each architecture component. Since the *SelectedModal* module logic is basic, no files related to the model and presenter components were added. Similarly, *SelectedModal* does not contain a coordinator and its view controller is presented directly from the Countries coordinator.
+
+The folder *Repository* contains all the classes for retrieving the countries list. 
+- *CountriesRespository.swift* defines the protocol that the classes must implement to get the countries list.
+- *CountriesAPIRepository.swift* implements the protocol and contains the code to retrieve the countries from the Postman mock server.
+- *MockCountriesRepository.swift* implements the same protocol, but in this class, the list of countries is created locally.
+
+The Countries coordinator is responsible for initializing all the dependencies required by the module to work. Dependencies are provided to the classes through dependency injection.
+
+# Technologies
+- Swift
+- UIKit
+
+# Author
+David Mendoza
